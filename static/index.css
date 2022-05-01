@@ -1,0 +1,95 @@
+#formpedidos{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 10px;
+}
+
+
+<div class="col-md-7">
+<table class="table table-striped table-bordered  table-sm">
+     <thead>
+     	<tr>
+          <td>codigo</td>
+          <td>nombre</td>
+          <td>Precio $</td>
+          <td>Precio Bs</td>
+          <td>Existencia</td>
+      	</tr>
+     </thead>
+     <tbody>
+               
+               {% for idp in ids  %}
+                    <tr>
+                    <td>{{ idp }}</td>
+                    </tr>
+               {% endfor %}
+
+               {% for nombre in nombres %}
+                     <tr>
+                     <td>{{ nombre }}</td>
+                </tr>
+               {% endfor %}
+
+               {% for precio in precio_dolar %}
+                     <tr>
+                     <td>{{ precio }}</td>
+                </tr>
+               {% endfor %}
+
+               {% for precio in precio_bs %}
+                    <tr>
+                    <td>{{ precio }}</td>
+                    </tr>
+               {% endfor %}
+        
+               {% for cantidad in existencia %}
+                    <tr>
+                    <td>{{ cantidad }}</td>
+               </tr>
+               {% endfor %}
+     </tbody>
+</table>
+</div>
+</body>
+</html>
+
+
+ <tbody>
+          {% for idp in ids %}
+          
+          <tr>
+               {% for idp in ids %}
+          </tr>
+                    <td>{{ idp }}</td>
+               {% endfor %}
+
+
+          <tr>
+               {% for nombre in nombres %}
+          </tr>
+                    <td>{{ nombre }}</td>
+               {% endfor %}
+
+
+           <tr>
+               {% for precio in precio_dolar %}
+                    <td>{{ precio }}</td>
+               {% endfor %}
+          </tr>
+
+
+                    <tr>
+               {% for precio in precio_bs %}
+                    <td>{{ precio }}</td>
+               {% endfor %}
+          </tr>
+          <tr>
+               {% for cantidad in existencia %}
+                    <td>{{ cantidad }}</td>
+               {% endfor %}
+          </tr>
+     </tbody>
+</table>
+</div>
+</body>
+</html>
